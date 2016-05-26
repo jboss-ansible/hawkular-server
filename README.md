@@ -1,5 +1,5 @@
-Hawkular Services Ansible Role
-==============================
+[WIP] Hawkular Services Ansible Role
+====================================
 
 To deploy and start Hawkular Services (the server part of Hawkular)
 

@@ -13,10 +13,10 @@ galaxy_info:
     - 23
 
   galaxy_tags:
-    monitoring
-    jboss
-    hawkular
-    timeseries
+    - monitoring
+    - jboss
+    - hawkular
+    - timeseries
 
 dependencies: []
   # List your role dependencies here, one per line.
