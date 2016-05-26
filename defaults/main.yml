@@ -1,2 +1,8 @@
 ---
-# defaults file for hawkular-services
+hawkular_version: 1.0.0.Alpha11
+hawkular_name: hawkular-dist-{{hawkular_version}}
+hawkular_http_port: 8080
+hawkular_bind_address: 0.0.0.0
+
+download_directory: /tmp
+target_directory: /opt
