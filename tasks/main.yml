@@ -11,9 +11,3 @@
   unarchive: src="{{ download_directory }}/{{ hawkular_name }}.tar.gz" dest="{{ target_directory }}" copy=no
   become: yes
   become_user: root
-
-- name: Check port availability
-  wait_for: host={{ inventory_hostname }} port={{ hawkular_http_port }} state=stopped timeout=10
-
-- name: Start Hawkular Services
-  command: "{{ target_directory }}/hawkular-{{ hawkular_version }}/bin/standalone.sh -Djboss.http.port={{ hawkular_http_port }} -Djboss.bind.address={{ hawkular_bind_address }}"

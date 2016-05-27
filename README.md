@@ -1,7 +1,7 @@
 [WIP] Hawkular Services Ansible Role
 ====================================
 
-To deploy and start Hawkular Services (the server part of Hawkular)
+To deploy Hawkular Services (the server part of Hawkular)
 
 Requirements
 ------------
@@ -16,20 +16,21 @@ hawkular_name: hawkular-dist-{{hawkular_version}}
 hawkular_http_port: 8080
 hawkular_bind_address: 0.0.0.0
 
-target_directory: /tmp
+download_directory: /tmp
+target_directory: /opt
 
 Dependencies
 ------------
 
-No dependency
+None
 
 Example Playbook
 ----------------
 
-- hosts: localhost
-  remote_user: root
+- hosts: hawkular-services-host
+  remote_user: theute
   roles:
-    - hawkular-services
+    - jboss-ansible.hawkular-services
 
 License
 -------
