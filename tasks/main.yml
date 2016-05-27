@@ -8,6 +8,6 @@
   get_url: url=http://download.jboss.org/hawkular/hawkular/{{ hawkular_version }}/{{ hawkular_name }}.tar.gz dest={{ download_directory }}/{{ hawkular_name }}.tar.gz
 
 - name: Unzip Hawkular Services
-  unarchive: src="{{ download_directory }}/{{ hawkular_name }}.tar.gz" dest="{{ target_directory }}" copy=no creates="{{ target_directory }}/hawkular-{{ hawkular_version }}{{ hawkular_version }}/bin/standalone.sh"
+  unarchive: src="{{ download_directory }}/{{ hawkular_name }}.tar.gz" dest="{{ target_directory }}" copy=no creates="{{ target_directory }}/hawkular-{{ hawkular_version }}/bin/standalone.sh"
   become: yes
   become_user: root
