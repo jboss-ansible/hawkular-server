@@ -9,7 +9,7 @@
 
 - name: Unzip Hawkular Services
 #  unarchive: src={{ download_directory }}/{{ hawkular_name }}.tar.gz dest={{ target_directory }}
-  unarchive: src=http://download.jboss.org/hawkular/hawkular/{{ hawkular_version }}/{{ hawkular_name }}.tar.gz dest={{ target_directory }}
+  unarchive: src="http://download.jboss.org/hawkular/hawkular/{{ hawkular_version }}/{{ hawkular_name }}.tar.gz" dest="{{ target_directory }}"
   become: yes
   become_user: root
 
