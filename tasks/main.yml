@@ -5,11 +5,11 @@
   become_user: root
 
 #- name: Download Hawkular Services
-#  get_url: url=http://download.jboss.org/hawkular/hawkular/{{ hawkular_version }}/{{ hawkular_name }}.tar.gz dest={{ download_directory }}/{{ hawkular_name }}.tar.gz
+  get_url: url=http://download.jboss.org/hawkular/hawkular/{{ hawkular_version }}/{{ hawkular_name }}.tar.gz dest={{ download_directory }}/{{ hawkular_name }}.tar.gz
 
 - name: Unzip Hawkular Services
-#  unarchive: src={{ download_directory }}/{{ hawkular_name }}.tar.gz dest={{ target_directory }}
-  unarchive: src="http://download.jboss.org/hawkular/hawkular/{{ hawkular_version }}/{{ hawkular_name }}.tar.gz" dest="{{ target_directory }}"
+  unarchive: src={{ download_directory }}/{{ hawkular_name }}.tar.gz dest={{ target_directory }}
+  copy: no
   become: yes
   become_user: root
 
