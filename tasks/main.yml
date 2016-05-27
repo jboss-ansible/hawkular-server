@@ -1,6 +1,8 @@
 ---
 - name: Install OpenJDK
   yum: name=java-1.8.0-openjdk-headless state=present
+  become: yes
+  become_user: root
 
 - name: Download Hawkular Services
   get_url: url=http://download.jboss.org/hawkular/hawkular/{{ hawkular_version }}/{{ hawkular_name }}.tar.gz dest={{ download_directory }}/{{ hawkular_name }}.tar.gz
